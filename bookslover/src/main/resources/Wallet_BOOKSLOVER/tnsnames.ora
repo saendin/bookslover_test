@@ -1,0 +1,12 @@
+bookslover_high = (description= (retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1522)(host=adb.ap-chuncheon-1.oraclecloud.com))(connect_data=(service_name=g8ef86414f7b11f_bookslover_high.adb.oraclecloud.com))(security=(ssl_server_dn_match=yes)))
+
+bookslover_low = (description= (retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1522)(host=adb.ap-chuncheon-1.oraclecloud.com))(connect_data=(service_name=g8ef86414f7b11f_bookslover_low.adb.oraclecloud.com))(security=(ssl_server_dn_match=yes)))
+
+bookslover_medium = (description= (retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1522)(host=adb.ap-chuncheon-1.oraclecloud.com))(connect_data=(service_name=g8ef86414f7b11f_bookslover_medium.adb.oraclecloud.com))(security=(ssl_server_dn_match=yes)))
+
+bookslover_tp = (description= (retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1522)(host=adb.ap-chuncheon-1.oraclecloud.com))(connect_data=(service_name=g8ef86414f7b11f_bookslover_tp.adb.oraclecloud.com))(security=(ssl_server_dn_match=yes)))
+
+bookslover_tpurgent = (description= (retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1522)(host=adb.ap-chuncheon-1.oraclecloud.com))(connect_data=(service_name=g8ef86414f7b11f_bookslover_tpurgent.adb.oraclecloud.com))(security=(ssl_server_dn_match=yes)))
+
+
+

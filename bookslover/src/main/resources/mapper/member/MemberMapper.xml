@@ -1,0 +1,16 @@
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bookslover.java.mapper.member.MemberMapper">
+<!-- 
+/**
+ * @create 01/17=8/23
+ * @author sunjin
+ * @title Member XML
+ */
+ -->
+
+ <!-- 회원목록조회 -->
+ <select id="getAllMemberList" resultType="MemberVO">
+ 	SELECT * FROM member
+ </select>
+ 
+ </mapper>

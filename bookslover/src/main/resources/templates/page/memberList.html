@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/default_layout}">
+
+	<div layout:fragment="content">
+		<h1>멤버리스트페이지입니다.</h1>
+	    <table id="memberTable">
+		    <thead>
+			    <tr>
+			         <th>Id</th>
+			         <th>Name</th>
+			         <th>NickName</th>
+			         <th>Birthday</th>
+			         <th>Phone</th>
+			     </tr>
+		     </thead>
+		     <tbody>
+			     <tr th:each="mem : ${list}">
+			         <td th:text="${mem.memId}"></td>    
+			         <td th:text="${mem.memName}"></td>
+			         <td th:text="${mem.memNickName}"></td>
+			         <td th:text="${mem.memBirthday}"></td>
+			         <td th:text="${mem.memPhone}"></td>
+			     </tr>
+		     </tbody>
+	     </table>
+	</div>
+
+</html>

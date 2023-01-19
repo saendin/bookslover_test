@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/default_layout}">
+
+<!-- index.html 고유 CSS 추가 -->
+<th:block layout:fragment="css">
+<!-- <link rel="stylesheet" th:href="@{/css/page/home.css}" > -->
+</th:block>
+<!-- index.html 고유 스크립트 추가 -->
+<th:block layout:fragment="script">
+    <!-- <script th:src="@{/js/page/home.js}"></script> -->
+</th:block>
+<!-- header 시작 -->
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+<body>
+	<div layout:fragment="content">
+		<header>
+			<div class="container-fluid">
+				<div class="slider-container">
+					<div class="owl-slider owl-carousel">
+						<div class="item">
+							<div class="owl-slider-item">
+								<img src="images/demo/slider-1.jpg" class="img-responsive" alt="portfolio">
+								<div class="intro-text">
+									<div class="intro-lead-in">We are the number one</div>
+									<div class="intro-heading">Design & Development Agency</div>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="owl-slider-item">
+								<img src="images/demo/slider-1.jpg" class="img-responsive" alt="portfolio">
+								<div class="intro-text">
+									<div class="intro-lead-in">We are the number one</div>
+									<div class="intro-heading">Design & Development Agency</div>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="owl-slider-item">
+								<img src="images/demo/slider-1.jpg" class="img-responsive" alt="portfolio">
+								<div class="intro-text">
+									<div class="intro-lead-in">We are the number one</div>
+									<div class="intro-heading">Design & Development Agency</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- header 끝 -->
+		<section id="about" class="light-bg">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 text-center">
+						<div class="section-title">
+							<h2>오늘의 책</h2>
+							<p>북스러버 에디터가 추천하는 오늘의 책을 만나보세요!<br><strong>책 책 책 책을 읽자!</strong></p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<!-- about module -->
+					<div class="col-md-3 text-center">
+						<div class="mz-module">
+							<div class="mz-module-about">
+								<i class="fa fa-briefcase color1 ot-circle"></i>
+								<h3>가방 들어주는 아이</h3>
+								<p>저자: 김모씨 | 출판년도: 2023/01/19</p>
+							</div>
+							<a href="#" class="mz-module-button">read more</a>
+						</div>
+					</div>
+					<!-- end about module -->
+					<!-- about module -->
+					<div class="col-md-3 text-center">
+						<div class="mz-module">
+							<div class="mz-module-about">
+								<i class="fa fa-photo color2 ot-circle"></i>
+								<h3>나의 라임 오렌지나무</h3>
+								<p>저자: 오모씨 | 출판년도: 2023/01/19</p>
+							</div>
+							<a href="#" class="mz-module-button">read more</a>
+						</div>
+					</div>
+					<!-- end about module -->
+					<!-- about module -->
+					<div class="col-md-3 text-center">
+						<div class="mz-module">
+							<div class="mz-module-about">
+								<i class="fa fa-camera-retro color3 ot-circle"></i>
+								<h3>아홉살 인생</h3>
+								<p>저자: 윤모씨 | 출판년도: 2023/01/19</p>
+							</div>
+							<a href="#" class="mz-module-button">read more</a>
+						</div>
+					</div>
+					<!-- end about module -->
+					<!-- about module -->
+					<div class="col-md-3 text-center">
+						<div class="mz-module">
+							<div class="mz-module-about">
+								<i class="fa fa-cube color4 ot-circle"></i>
+								<h3>아낌없이 주는 나무</h3>
+								<p>저자: 아모씨 | 출판년도: 2023/01/19</p>
+							</div>
+							<a href="#" class="mz-module-button">read more</a>
+						</div>
+					</div>
+					<!-- end about module -->
+				</div>
+			</div>
+			<!-- /.container -->
+		</section>
+		
+		
+		<h1>메인페이지입니다.</h1>
+	    <table id="memberTable">
+		    <thead>
+			    <tr>
+			         <th>Id</th>
+			         <th>Name</th>
+			         <th>NickName</th>
+			         <th>Birthday</th>
+			         <th>Phone</th>
+			     </tr>
+		     </thead>
+		     <tbody>
+			     <tr th:each="mem : ${list}">
+			         <td th:text="${mem.memId}"></td>    
+			         <td th:text="${mem.memName}"></td>
+			         <td th:text="${mem.memNickName}"></td>
+			         <td th:text="${mem.memBirthday}"></td>
+			         <td th:text="${mem.memPhone}"></td>
+			     </tr>
+		     </tbody>
+	     </table>
+	</div>
+</body>
+</html>

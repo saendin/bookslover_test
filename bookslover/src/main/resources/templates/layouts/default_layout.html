@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lagn="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8" />
+    <title>thymeleaf layout</title>
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1, user-scalable=yes,initial-scale=1.0" />
+    <!-- content script -->
+    <th:block layout:fragment="css"></th:block>
+   	<link href="/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="/stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<!-- Custom styles for this template -->
+	<link href="/css/owl.carousel.css" rel="stylesheet">
+	<link href="/css/owl.theme.default.min.css"  rel="stylesheet">
+	<link href="/css/animate.css" rel="stylesheet">
+	<link href="/css/style.css" rel="stylesheet">
+    <!-- content script -->
+    <th:block layout:fragment="script"></th:block>
+</head>
+<body>
+    <!-- header fragment 사용 -->
+    <th:block th:replace="fragments/header :: headerFragment" /> <!-- header.html에서 지정했던 header가 고정됨. -->
+    
+    
+    <!-- content fragment 사용 -->
+    <th:block layout:fragment="content" />
+    
+    
+    <!-- footer fragment 사용 -->
+    <th:block th:replace="fragments/footer :: footerFragment"></th:block>
+		
+	<script src="@{https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js}"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/cbpAnimatedHeader.js"></script>
+	<script src="js/jquery.appear.js"></script>
+	<script src="js/SmoothScroll.min.js"></script>
+	<script src="js/theme-scripts.js"></script>
+</body>
+</html>

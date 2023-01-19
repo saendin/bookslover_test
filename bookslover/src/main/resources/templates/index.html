@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+  xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+    <table solid id="memberTable">
+	    <thead>
+		    <tr>
+		         <th>Id</th>
+		         <th>Name</th>
+		         <th>NickName</th>
+		         <th>Birthday</th>
+		         <th>Phone</th>
+		     </tr>
+	     </thead>
+	     <tbody>
+		     <tr th:each="mem : ${list}">
+		         <td th:text="${mem.memId}"></td>    
+		         <td th:text="${mem.memName}"></td>
+		         <td th:text="${mem.memNickName}"></td>
+		         <td th:text="${mem.memBirthday}"></td>
+		         <td th:text="${mem.memPhone}"></td>
+		     </tr>
+	     </tbody>
+     </table>
+</body>
+</html>
